@@ -4,7 +4,7 @@ This is a web application that allows users to upload an image and generate a co
 ## Installation
 To install the application, you can follow these steps:
 
-Clone the repository to your local machine using the command git clone https://github.com/your-username/image-color-palette-generator.git.
+Clone the repository to your local machine using the command git clone https://github.com/stevenrobertsdev/image-color-palette-generator.git.
 Navigate to the project directory using the command cd image-color-palette-generator.
 Install the required dependencies using the command npm install.
 
