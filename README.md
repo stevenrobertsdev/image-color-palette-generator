@@ -1,7 +1,7 @@
 # Image Color Palette Generator
 This project and README were created by ChatGPT, a large language model trained by OpenAI. The goal of this project was to demonstrate how to build a web application that allows users to upload an image and generate a color palette based on the colors in the image.
 
-This is a web application that allows users to upload an image and generate a color palette based on the colors in the image. The application is built using Node.js and Express, and uses the Color Thief library to extract colors from the uploaded image.
+This is a web application that allows users to upload an image and generate a color palette based on the colors in the image. The application is built using Node.js and Express, and uses the Node Vibrant library to extract colors from the uploaded image.
 
 ## Installation
 To install the application, you can follow these steps:
