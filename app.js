@@ -5,7 +5,9 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const upload = multer({ dest: 'uploads/' });
+const upload = multer({
+  dest: 'uploads/'
+});
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
@@ -35,7 +37,10 @@ app.post('/upload', upload.single('image'), async (req, res) => {
 
         const imageURL = `/uploads/${req.file.filename}`;
 
-        res.render('upload', { colors: colors, imageURL: imageURL });
+        res.render('upload', {
+          colors: colors,
+          imageURL: imageURL
+        });
       }
     });
   } catch (error) {

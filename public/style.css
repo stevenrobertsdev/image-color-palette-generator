@@ -1,15 +1,14 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    }
-    form {
+}
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-    }
-
-    input[type="file"] {
+}
+input[type="file"] {
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -18,29 +17,28 @@ body {
     background-color: #fff;
     color: #333;
     cursor: pointer;
-    }
-    h1 {
+}
+h1 {
     text-align: center;
     margin: 20px 0!important;
-    }
-    button {
-        margin-top: 15px;
-    }
-    .wrapper {
-        text-align: center;
-      }
-      .color-blocks {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .color-block {
-        width: 100px;
-        height: 100px;
-        text-align: center;
-        line-height: 100px;
-      }
-
-      input[type="file"] {
-        width: 50%
-      }
+}
+button {
+    margin-top: 15px;
+}
+.wrapper {
+    text-align: center;
+}
+.color-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.color-block {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+input[type="file"] {
+    width: 50% 
+}
