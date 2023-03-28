@@ -8,6 +8,8 @@ const app = express();
 const upload = multer({ dest: 'uploads/' });
 
 app.use(express.static('public'));
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
@@ -17,8 +19,10 @@ app.post('/upload', upload.single('image'), async (req, res) => {
   try {
     const imagePath = req.file.path;
 
-    Vibrant.from(imagePath).getPalette((err, palette) => {
-      fs.unlinkSync(imagePath);
+    Vibrant.from(imagePath).getPalette(async (err, palette) => {
+      if (fs.existsSync(imagePath)) {
+        fs.unlinkSync(imagePath);
+      }
 
       if (err) {
         console.error('Error:', err);
@@ -29,16 +33,7 @@ app.post('/upload', upload.single('image'), async (req, res) => {
           .slice(0, 5)
           .map((swatch) => swatch.hex);
 
-        res.send(`
-      <h1>Primary Colors:</h1>
-      <ul>
-        ${colors
-          .map(
-            (color) => `<li style="background-color:${color};">${color}</li>`
-          )
-          .join('')}
-      </ul>
-    `);
+        res.render('upload', { colors: colors });
       }
     });
   } catch (error) {
