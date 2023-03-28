@@ -33,7 +33,9 @@ app.post('/upload', upload.single('image'), async (req, res) => {
           .slice(0, 5)
           .map((swatch) => swatch.hex);
 
-        res.render('upload', { colors: colors });
+        const imageURL = `/uploads/${req.file.filename}`;
+
+        res.render('upload', { colors: colors, imageURL: imageURL });
       }
     });
   } catch (error) {
